@@ -25,10 +25,23 @@ class ViewController: UIViewController {
     }
 
     @IBAction func guessBtn(_ sender: Any) {
-        
+        // Checks to make sure there is text there
+        if let guess = guessTextField.text {
+            
+            // Checks to make sure entry entered is a number
+            if let guessAsNumber = Int(guess) {
+                
+                // Random number generator from 0 to 5
+                let fingers = arc4random_uniform(6)
+                
+                // Posting either correct or incorrect answer
+                if guessAsNumber == fingers {
+                    answerLbl.text = "You're Right!"
+                } else {
+                    answerLbl.text = "Wrong! It was a \(fingers)"
+                }
+            }
+        }
     }
-    
-    
-
 }
 
