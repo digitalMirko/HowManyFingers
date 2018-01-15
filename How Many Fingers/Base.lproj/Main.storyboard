@@ -55,6 +55,9 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="ict-w4-wzr"/>
                                 </constraints>
                                 <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guessBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zDo-6t-XZX"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wrong! it was a 2." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LqS-uc-Rhx">
                                 <rect key="frame" x="102" y="235" width="171" height="20.5"/>
@@ -86,6 +89,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLbl" destination="LqS-uc-Rhx" id="bAl-SK-dc6"/>
+                        <outlet property="guessTextField" destination="l7H-38-ndO" id="Rhh-p1-k0t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
